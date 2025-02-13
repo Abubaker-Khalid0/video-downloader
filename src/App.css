@@ -1,0 +1,151 @@
+/* App.css */
+
+/* Reset بعض العناصر الأساسية */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* تنسيق عام للتطبيق */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #fff;
+  padding: 20px;
+}
+
+/* تنسيق الهيدر */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+/* تنسيق نموذج التنزيل */
+.download-form {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.url-input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  outline: none;
+}
+
+.url-input::placeholder {
+  color: #666;
+}
+
+.download-button {
+  padding: 12px 24px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.download-button:hover {
+  background: #0056b3;
+}
+
+.download-button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+/* تنسيق رسائل الخطأ */
+.error-message {
+  color: #ff6b6b;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* تنسيق قسم التنزيل */
+.download-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.download-link {
+  color: #4dabf7;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.download-link:hover {
+  color: #228be6;
+}
+
+/* تأثيرات إضافية */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+  .input-group {
+    flex-direction: column;
+  }
+
+  .download-button {
+    width: 100%;
+    margin-top: 10px;
+  padding: 12px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+}

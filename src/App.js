@@ -20,11 +20,10 @@ function App() {
       setError('');
       setDownloadLink('');
 
-      const response = await axios.post('http://localhost:5000/download', {
-        url: url
-      }, {
-        responseType: 'blob'
-      });
+      const response = await axios.post('https://video-downloader-3ifa.onrender.com/download', 
+        { url }, 
+        { responseType: 'blob' }
+      );
 
       const downloadUrl = window.URL.createObjectURL(new Blob([response.data]));
       setDownloadLink(downloadUrl);

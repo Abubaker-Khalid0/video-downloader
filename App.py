@@ -28,6 +28,7 @@ def download_video():
         'outtmpl': '%(title)s.%(ext)s',
         'quiet': True,
         'no_warnings': True,
+        'cookiefile': 'cookies.txt',
     }
 
     try:

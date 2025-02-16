@@ -22,6 +22,7 @@ def download_and_save(video_url, download_id):
         'outtmpl': os.path.join(temp_dir, '%(title)s.%(ext)s'),
         'quiet': True,
         'no_warnings': True,
+        'cookies_from_browser': 'chrome'
     }
 
     try:

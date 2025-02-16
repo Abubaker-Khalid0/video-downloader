@@ -11,6 +11,10 @@ def sanitize_filename(filename):
     # Add your sanitization logic here
     return "video.mp4"
 
+@app.route('/')
+def home():
+    return "Backend is running successfully!"
+
 @app.route('/download', methods=['POST'])
 def download_video():
     data = request.json
@@ -49,6 +53,7 @@ def download_video():
     except Exception as e:
         print(f"Error: {str(e)}")
         return {'error': str(e)}, 500
+
 
 if __name__ == '__main__':
     app.run(debug=True)
